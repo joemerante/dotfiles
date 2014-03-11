@@ -1,5 +1,17 @@
+" line numbers on by default
+set number
+
+" Display options where available
+set t_Co=256
+color grb256
+syntax on
+
 " Clipboard functionality for vim
 set clipboard=unnamed
+set tabstop=2
+set textwidth=80
+set shiftwidth=2
+set softtabstop=2
 
 " Mouse support
 if has("mouse")
@@ -26,9 +38,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-rails'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -49,3 +63,6 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
+"
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
