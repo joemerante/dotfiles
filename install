@@ -1,4 +1,4 @@
 #!/bin/bash
 
-ln -s rc/* ~/
+ln -s ~/dotfiles/rc/.* ~/
 .vim/install

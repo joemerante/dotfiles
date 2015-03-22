@@ -61,6 +61,8 @@ alias dbtest="RAILS_ENV=test rake db:drop db:create db:migrate db:seed"
 ibooks() {
 	echo '/Users/joemerante/Library/Containers/com.apple.BKAgentService/Data/Documents/iBooks/Books'
 }
+# show sym links in current directory
+alias sym='ls -l `find . -maxdepth 1 -type l -print`'
 #PATH="${PATH}:/Applications/MAMP/Library/Library/bin:$PATH"
 #export PATH
 
