@@ -1,3 +1,5 @@
+set encoding=utf-8
+
 " line numbers on by default
 set number
 
@@ -52,6 +54,10 @@ Bundle 'kien/ctrlp.vim'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+
+" NERDTree
+map <gt> :tabn<CR>
+let g:NERDTreeShowHidden=1
 
 filetype plugin indent on     " required!
 "
