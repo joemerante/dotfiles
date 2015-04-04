@@ -77,3 +77,6 @@ export EDITOR="/usr/local/bin/subl -w"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # put environment variables in .zshenv
+NPM_PACKAGES=/Users/joemerante/.npm-packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
