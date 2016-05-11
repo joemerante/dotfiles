@@ -43,12 +43,13 @@ export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME" export PIP_VIRTUALENV_BASE=$WOR
 export PIP_RESPECT_VIRTUALENV=true
 # source /System/Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 
+alias maze='load 'server.rb' ; ClientServer.new('localhost', 9099).start'
 alias show-hidden='defaults write com.apple.finder AppleShowAllFiles -bool YES'
 alias hide-hidden='defaults write com.apple.finder AppleShowAllFiles -bool NO'
-alias drush='/Applications/MAMP/htdocs/drupal/drush/drush'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias heroky='heroku'
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstartlog='/usr/local/Cellar/postgresql/9.4.1/bin/postgres -D /usr/local/var/postgres'
 alias pgstop='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
 alias chrome='/usr/bin/open -a "/Applications/Google Chrome.app"'
 alias bx='bundle exec'
@@ -63,6 +64,7 @@ ibooks() {
 }
 # show sym links in current directory
 alias sym='ls -l `find . -maxdepth 1 -type l -print`'
+alias simpleserver="python -m SimpleHTTPServer 8000"
 #PATH="${PATH}:/Applications/MAMP/Library/Library/bin:$PATH"
 #export PATH
 
@@ -75,5 +77,10 @@ export PATH
 export EDITOR="/usr/local/bin/subl -w"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# composer php dependency manager, for drush
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+
 
 # put environment variables in .zshenv

@@ -1,6 +1,5 @@
 set encoding=utf-8
 
-" line numbers on by default
 set number
 
 " Display options where available
@@ -14,10 +13,22 @@ set tabstop=2
 set textwidth=80
 set shiftwidth=2
 set softtabstop=2
+" use ctrl-C to yank to the system clipboad by default
+" cannot map the command key in vim..  
+vnoremap <C-c> "*y
+
+"make delete key behave like it does in other programs
+set backspace=indent,eol,start
+
+"if $TERM_PROGRAM =~ "iTerm"
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+"let &t_SI .= "\<Esc>[1 q" "blinking block in insert mode
+"	let &t_SI = "\<Esc>]12;orange\x7"
+"endif
 
 " Mouse support
 if has("mouse")
-  set mouse=a
+	set mouse=a
 endif
 
 set mousefocus
@@ -51,6 +62,10 @@ Bundle 'FuzzyFinder'
 Bundle 'tpope/vim-markdown'
 " non-GitHub repos
 Bundle 'kien/ctrlp.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
