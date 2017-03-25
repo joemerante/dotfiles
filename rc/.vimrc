@@ -10,9 +10,11 @@ syntax on
 " Clipboard functionality for vim
 set clipboard=unnamed
 set tabstop=2
-set textwidth=80
 set shiftwidth=2
 set softtabstop=2
+set wrap
+set linebreak
+
 " use ctrl-C to yank to the system clipboad by default
 " cannot map the command key in vim..  
 vnoremap <C-c> "*y
@@ -75,7 +77,7 @@ map <gt> :tabn<CR>
 let g:NERDTreeShowHidden=1
 
 filetype plugin indent on     " required!
-"
+filetype indent on"
 " Brief help
 " :BundleList          - list configured bundles
 " :BundleInstall(!)    - install (update) bundles

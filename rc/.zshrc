@@ -32,8 +32,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/usr/local/bin:/Users/joemerante/.rvm/bin:/Users/joemerante/pear/bin
-
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/git/bin:/usr/local/bin:/Users/joemerante/pear/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # virtualenvwrapper stuff
@@ -53,6 +53,7 @@ alias pgstartlog='/usr/local/Cellar/postgresql/9.4.1/bin/postgres -D /usr/local/
 alias pgstop='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log stop'
 alias chrome='/usr/bin/open -a "/Applications/Google Chrome.app"'
 alias bx='bundle exec'
+alias rdbc='rails dbconsole'
 alias subl='sublime'
 alias st='status'
 alias gcam='git commit -am'
@@ -76,7 +77,9 @@ export PATH
 
 export EDITOR="/usr/local/bin/subl -w"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # composer php dependency manager, for drush
 export PATH="$HOME/.composer/vendor/bin:$PATH"
