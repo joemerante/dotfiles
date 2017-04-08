@@ -1,0 +1,26 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AlignTab",
+		"Babel",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"Emmet",
+		"ESLint",
+		"Git",
+		"Material Theme",
+		"Material Theme - Appbar",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-rubocop",
+		"SublimeLinter-ruby",
+		"Theme - Cobalt2",
+		"TrailingSpaces"
+	]
+}
